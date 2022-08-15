@@ -1,0 +1,400 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+
+.nodata {
+  margin: 0 auto;
+  width: 60%;
+}
+body {
+  background: #f1f1f1;
+  margin: 0;
+  font-family: "Poppins";
+}
+header {
+  background: #fff;
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container img {
+  height: 50px;
+}
+header a {
+  color: #333;
+  text-decoration: none;
+}
+.pages {
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* homepage */
+.home {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 100px;
+}
+.workout-details {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+.workout-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+  text-transform: capitalize;
+}
+.workout-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+.workout-details .options div:nth-child(2) {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+.workout-details .options div:nth-child(1) {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+
+/* new workout form */
+label,
+input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  outline-color: var(--primary);
+  outline-width: 7px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  padding-inline: 35px;
+  font-size: 16px;
+  padding-block: 15px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.success {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+input.error {
+  border: 1px solid var(--error);
+}
+.scaleout {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transform: scale(0);
+  position: fixed;
+  background-color: #f1f1f1;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+.scalein {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transform: scale(1);
+  position: fixed;
+  background-color: #f1f1f1;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+.update-details {
+  width: 700px;
+  padding: 40px;
+  position: fixed;
+  background-color: #fff;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.update-details form {
+  width: 100%;
+  /* height: 100px;
+  background-color: rgb(0, 255, 64); */
+  /* max-width: 1000px; */
+}
+.cancel {
+  background-color: rgba(255, 255, 255, 0.422);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  backdrop-filter: blur(5px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.signinup {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .update-details {
+    width: 500px;
+  }
+  .container img {
+    height: 40px;
+  }
+  .nodata {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .home {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .update-details {
+    width: 320px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container img {
+    margin: 10px;
+  }
+  header .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .update-details {
+    width: 200px;
+  }
+}
+.search {
+  position: relative;
+}
+.searchinput {
+  font-family: "Poppins";
+  height: 50px;
+  outline-color: var(--primary);
+  outline-width: 7px;
+}
+.searchicon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+button {
+  position: relative;
+  overflow: hidden;
+}
+.delete,
+.update {
+  position: relative;
+  overflow: hidden;
+}
+.delete::before,
+.update::before {
+  position: absolute;
+  top: 0;
+  left: -85%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+  transition: left 0.7s;
+  opacity: 0;
+}
+.delete:hover::before,
+.update:hover::before {
+  opacity: 1;
+  left: 120%;
+}
+button::before {
+  position: absolute;
+  top: 0;
+  left: -85%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+  transition: left 1s;
+  opacity: 0;
+}
+
+button:hover::before {
+  opacity: 1;
+  left: 120%;
+}
+
+/* navbar */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 5px;
+}
+/* auth forms */
+form.signup,
+form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+nav button {
+  cursor: pointer;
+  font-family: "Poppins";
+  background-color: white;
+  font-size: 14px;
+  border: 1px solid var(--primary);
+  padding-inline: 35px;
+  padding-block: 15px;
+  border-radius: 4px;
+  transition: 0.4s ease-in-out;
+  margin-left: 35px;
+}
+nav button:hover {
+  border: 1px solid var(--primary);
+  color: white;
+  background-color: var(--primary);
+  padding-inline: 35px;
+  padding-block: 15px;
+  border-radius: 4px;
+}
+
+.loader {
+  margin: 100px auto;
+  border: 6px solid #333; /* Light grey */
+  border-top: 6px solid var(--primary); /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.user {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--primary);
+  border-radius: 50%;
+  color: white;
+}
+.workouttitle {
+  margin-block: 7px;
+  margin-bottom: 20px;
+  background-color: var(--primary);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+}
