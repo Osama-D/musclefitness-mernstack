@@ -7,7 +7,6 @@ function Login() {
   async function handleSubmit(e) {
     e.preventDefault();
     await login(email, password);
-    console.log("sa");
   }
   return (
     <div>
