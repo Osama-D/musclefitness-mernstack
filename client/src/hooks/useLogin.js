@@ -23,9 +23,7 @@ export const useLogin = () => {
       }
     );
     const json = await response.json();
-    console.log("json", json);
     if (!response.ok) {
-      console.log("json1", json);
       setSuccessuser(false);
       setIsLoading(false);
       setError(json.error);
@@ -33,7 +31,6 @@ export const useLogin = () => {
     }
 
     if (response.ok) {
-      console.log("json2", json);
       // save the user to local storage
       localStorage.setItem("user", JSON.stringify(json));
 
