@@ -1,4 +1,5 @@
 require("dotenv").config();
+var path = require("path");
 
 const express = require("express");
 const mongoose = require("mongoose");
@@ -20,7 +21,7 @@ app.use("/api/user", userRoutes);
 // Server production assests
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
-  app.get("/*", function (req, res) {
+  app.use("*", function (req, res) {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
   });
 }
