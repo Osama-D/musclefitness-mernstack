@@ -5,7 +5,7 @@
 
 <h1 align="left">#Overview - <a href="https://musclefitness-mern-stack.herokuapp.com/">Live Demo</a>
  </h1>
-<p align="left" Muscle & Fitness app built with React as a front end and node/express as a backend & mongoDB as a database Also jsonwebtoken for authentication ... All used to build a friendly user experience.
+<p align="left"> Muscle & Fitness app built with React as a front end and node/express as a backend & mongoDB as a database Also jsonwebtoken for authentication ... All used to build a friendly user experience.
 </p>
  <h1 align="left"> Features</h1>
 <li>CRUD (refers to the four functions that are Create, Read, Update and Delete) </li>
