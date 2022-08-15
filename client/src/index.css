@@ -219,6 +219,9 @@ input.error {
     width: 320px;
   }
 }
+.user p {
+  pointer-events: none;
+}
 @media screen and (max-width: 400px) {
   .container img {
     margin: 10px;
