@@ -13,7 +13,7 @@
 <li>Responsive design</li>
 <h1 align="left"> Overall</h1>
 
-<p>This project is built just to get used to mern stack and have some kind of understanding of these collections of technologies and lastely to warm up for my next project which going to be BETTER/BIGGER</p>
+<p>This project is built just to get used to mern stack and have some kind of understanding of these collections of technologies and lastely to warm up for my next project which going to be BETTER/BIGGER.</p>
 
 <h2> If you found this project useful, then please consider giving it a ⭐ ❤️</h2>
 
